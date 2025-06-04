@@ -1,202 +1,223 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تهنئة العيد 🎉</title>
+    <title>تهنئة عيد سعيد للعائلة الكريمة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            background-color: #ffcc00;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            margin: 0;
-            color: #ffffff;
-            font-size: 30px;
-        }
-
-        .header a {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background-color: #1a1a1a;
             color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            margin-top: 10px;
-            display: block;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
         }
-
-        .container {
-            margin-top: 20px;
+        
+        h1 {
+            color: #f8d56b;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
-        .cards {
+        
+        .cards-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background-color: #ffcc00;
-            padding: 20px;
-            border-radius: 10px;
-            width: 200px;
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .card:hover {
-            background-color: #ff9900;
-        }
-
-        .message-box {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 80%;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .message-box button {
-            margin-top: 20px;
-            padding: 10px 15px;
-            border: none;
-            background-color: #d9534f;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        .message-box button:hover {
-            background-color: #c9302c;
-        }
-
-        iframe {
-            display: block;
+            gap: 25px;
+            max-width: 1200px;
             margin: 0 auto;
-            margin-top: 20px;
-            width: 100%;
-            max-width: 600px;
-            height: 350px;
         }
-
-        .gift-link {
-            background-color: #ffcc00;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 5px;
-            font-size: 20px;
-            text-decoration: none;
+        
+        .card {
+            width: 280px;
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .card h2 {
+            color: #f8d56b;
+            margin: 15px 0;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+        
+        .card p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #d1d1d1;
+            transition: all 0.3s;
+        }
+        
+        .card-icon {
+            font-size: 60px;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+        
+        .message {
+            display: none;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            animation: fadeIn 0.5s;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .active-card h2 {
+            font-size: 2.2rem !important;
+            color: #ffd700 !important;
+        }
+        
+        .active-card p {
+            font-size: 1.5rem !important;
+            color: #fff !important;
+        }
+        
+        .active-card .card-icon {
+            transform: scale(1.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* تعديلات خاصة بأمل */
+        .amal .card-icon { 
+            color: #ff9e43;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .unemployed-tag {
+            background: #ff9e43;
             color: white;
-            display: block;
-            width: fit-content;
-            margin: auto;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-right: 10px;
         }
-
-        .gift-link:hover {
-            background-color: #ff9900;
-        }
+        
+        /* ألوان مميزة لباقي الأفراد */
+        .mom .card-icon { color: #ff6b8b; }
+        .father .card-icon { color: #5c7cfa; }
+        .mohammed .card-icon { color: #4dabf7; }
+        .ahmed .card-icon { color: #9775fa; }
+        .malak .card-icon { color: #f783ac; }
     </style>
 </head>
 <body>
-
-    <!-- رأس الصفحة مع أغنية العيد -->
-    <div class="header">
-        <h1>🎊 عيدكم مبارك 🎉</h1>
-        <a href="https://youtu.be/rZW9ap6bN7U?si=wBzRha6asd1675jl" target="_blank">استماع إلى أغنية العيد</a>
-        <iframe src="https://www.youtube.com/embed/rZW9ap6bN7U?autoplay=1" frameborder="0" allow="autoplay"></iframe>
-    </div>
-
-    <div class="container">
-        <p>اضغط على بطاقة أي فرد لرؤية رسالة العيد!</p>
-        <div class="cards">
-            <div class="card" onclick="showMessage('أبي')">أبي</div>
-            <div class="card" onclick="showMessage('أمي')">أمي</div>
-            <div class="card" onclick="showMessage('محمد')">محمد</div>
-            <div class="card" onclick="showMessage('أمل')">أمل</div>
-            <div class="card" onclick="showMessage('أحمد')">أحمد</div>
-            <div class="card" onclick="showMessage('ملاك')">ملاك</div>
-            <div class="card" onclick="showMessage('خالد')">خالد</div>
+    <h1>كل عام وأنتم بخير يا عائلتي الغالية! 💖</h1>
+    
+    <div class="cards-container">
+        <!-- بطاقة الأم -->
+        <div class="card mom" onclick="toggleCard(this)">
+            <div class="card-icon">👩‍👧</div>
+            <h2>أمي الحبيبة</h2>
+            <p>قلب البيت النابض</p>
+            <div class="message">
+                كل عام وأنتِ بألف خير يا أغلى أم، نورتي حياتنا بحبك وحنانك، أسأل الله أن يمد في عمرك ويحفظك لنا.
+            </div>
+        </div>
+        
+        <!-- بطاقة الأب -->
+        <div class="card father" onclick="toggleCard(this)">
+            <div class="card-icon">👨‍👧</div>
+            <h2>أبي الغالي</h2>
+            <p>سند العائلة وقوتها</p>
+            <div class="message">
+                كل عام وأنت بصحة وعافية يا قدوتنا، الله يحفظك ويمدك بالصحة والعمر المديد، شكراً على كل تضحياتك من أجلنا.
+            </div>
+        </div>
+        
+        <!-- بطاقة محمد المهندس -->
+        <div class="card mohammed" onclick="toggleCard(this)">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <h2>محمد المهندس</h2>
+            <p>مبروك التخرج!</p>
+            <div class="message">
+                مبروك يا مهندسنا العزيز، نفتخر بإنجازك ونسأل الله أن يوفقك في حياتك العملية، أنت مثال للتفوق والتميز.
+            </div>
+        </div>
+        
+        <!-- بطاقة أمل المعدلة -->
+        <div class="card amal" onclick="toggleCard(this)">
+            <div class="card-icon"><i class="fas fa-coffee"></i></div>
+            <h2>أمل <span class="unemployed-tag">عاطلة</span></h2>
+            <p>في إجازة استرخاء!</p>
+            <div class="message">
+                <p>🎯 خطط المستقبل:</p>
+                <ul style="text-align: right; padding-right: 20px;">
+                    <li>شهر عسل مع النت 🌐</li>
+                    <li>دورات تطوير ذاتي 🎨</li>
+                    <li>استكشاف فرص جديدة 🔍</li>
+                </ul>
+                <p>كل عام وأنتِ بخير يا أمل، الفرص الجاية أحلى إن شاء الله!</p>
+            </div>
+        </div>
+        
+        <!-- بطاقة أحمد -->
+        <div class="card ahmed" onclick="toggleCard(this)">
+            <div class="card-icon"><i class="fas fa-hospital-user"></i></div>
+            <h2>أحمد</h2>
+            <p>طالب الطب المتفوق</p>
+            <div class="message">
+                كل عام وأنت بخير يا دكتورنا، نرى فيك المستقبل المشرق للطب، استمر في تميزك واجتهادك.
+            </div>
+        </div>
+        
+        <!-- بطاقة ملاك -->
+        <div class="card malak" onclick="toggleCard(this)">
+            <div class="card-icon"><i class="fas fa-star"></i></div>
+            <h2>ملاك</h2>
+            <p>نجمة العائلة المضيئة</p>
+            <div class="message">
+                كل عام وأنتِ بخير يا ملاك، نورك يضيء بيتنا، نتمنى لك عاماً مليئاً بالنجاح والسعادة.
+            </div>
         </div>
     </div>
 
-    <!-- رسالة التهنئة -->
-    <div id="messageBox" class="message-box">
-        <p id="messageText"></p>
-        <div id="giftContainer"></div>
-        <button onclick="closeMessage()">إغلاق</button>
-    </div>
-
     <script>
-        function showMessage(person) {
-            let message = "";
-            let giftLink = "";
-
-            if (person === "محمد") {
-                message = `🎉 عيدك مبارك يا محمد! 🎉<br> 
-                كل عام وأنت بخير وسعادة، أتمنى لك حياة مليئة بالفرح والنجاح، 
-                وأن تحقق جميع أحلامك. أنت شخص رائع ومميز، وأيامك دائماً تكون مليئة بالبهجة! 🌟`;
-                giftLink = '<a href="https://youtube.com/shorts/hfjNuYkT1Kw?si=pVkkjxNk0_82r10R" class="gift-link" target="_blank">🎁 هديتك هنا! 🎁</a>';
-            } else if (person === "أبي") {
-                message = `عيدك مبارك يا أبي العزيز! 💙<br> 
-                أتمنى لك دوام الصحة والعافية، أنت قدوتي وأفضل إنسان في حياتي، 
-                بارك الله فيك ورزقك السعادة والرضا. عيدك سعيد وكل عام وأنت بخير!`;
-            } else if (person === "أمي") {
-                message = `أمي الحبيبة، عيدك سعيد يا أغلى إنسانة في حياتي! 💖<br> 
-                أتمنى أن تكون أيامك مليئة بالفرح، وأن يديم الله عليكِ الصحة والعافية، 
-                شكراً لكل شيء تقدمينه لنا، أنتِ النور الذي ينير حياتنا!`;
-            } else if (person === "أمل") {
-                message = `عيد سعيد يا أمل! 🌸<br> 
-                أتمنى لك حياة مليئة بالنجاحات واللحظات الجميلة، 
-                وأتمنى أن يكون عيدك مليئًا بالسعادة والفرح والسرور! 🎊`;
-            } else if (person === "أحمد") {
-                message = `كل عام وأنت بخير يا أحمد! 🎉<br> 
-                عيدك مبارك، وأتمنى أن تحقق كل أهدافك وأحلامك، 
-                وتعيش أيامًا جميلة مليئة بالسعادة!`;
-            } else if (person === "ملاك") {
-                message = `عيد سعيد يا ملاك! 😍<br> 
-                أتمنى لك عيداً مليئًا بالحب والفرح، وأن يحقق الله لك كل أمنياتك!`;
-            } else if (person === "خالد") {
-                message = `عيدك مبارك يا خالد! 🎊<br> 
-                أتمنى لك أيامًا جميلة مليئة بالضحك والفرح والسعادة!`;
+        function toggleCard(card) {
+            // إخفاء جميع الرسائل الأخرى
+            document.querySelectorAll('.card').forEach(c => {
+                if(c !== card) {
+                    c.querySelector('.message').style.display = 'none';
+                    c.classList.remove('active-card');
+                }
+            });
+            
+            // تبديل الحالة للبطاقة المحددة
+            const message = card.querySelector('.message');
+            const isActive = card.classList.contains('active-card');
+            
+            if(isActive) {
+                message.style.display = 'none';
+                card.classList.remove('active-card');
+            } else {
+                message.style.display = 'block';
+                card.classList.add('active-card');
             }
-
-            document.getElementById("messageText").innerHTML = message;
-            document.getElementById("giftContainer").innerHTML = giftLink;
-            document.getElementById("messageBox").style.display = "block";
-        }
-
-        function closeMessage() {
-            document.getElementById("messageBox").style.display = "none";
         }
     </script>
-
 </body>
 </html>
