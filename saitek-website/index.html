@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ساتيك | S A</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800;1000&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container">
+			<a href="#home" class="brand" aria-label="العودة للرئيسية">
+				<img src="assets/logo.png" alt="شعار ساتيك" class="logo" />
+				<span class="brand-text">ساتيك</span>
+			</a>
+			<button class="menu-toggle" aria-label="فتح وإغلاق القائمة" aria-expanded="false" aria-controls="primary-nav">
+				<span></span><span></span><span></span>
+			</button>
+			<nav id="primary-nav" class="nav">
+				<ul>
+					<li><a href="#home">الرئيسية</a></li>
+					<li><a href="#about">من نحن</a></li>
+					<li><a href="#projects">المشاريع</a></li>
+					<li><a href="#contact">تواصل معنا</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="home" class="hero-section">
+		<div class="container">
+			<div class="hero-content">
+				<h1><span class="s">S</span><span class="a">A</span> — ساتيك</h1>
+				<p>أول نظام سعودي حديث. نصنع حلولًا تقنية أنيقة، سريعة، وآمنة.</p>
+				<div class="hero-actions">
+					<a href="#projects" class="btn primary">مشاهدة المشاريع</a>
+					<a href="#contact" class="btn ghost">تواصل الآن</a>
+				</div>
+			</div>
+			<div class="hero-visual" aria-hidden="true">
+				<div class="shape s"></div>
+				<div class="shape a"></div>
+			</div>
+		</div>
+	</main>
+
+	<section id="about" class="section about-section">
+		<div class="container grid-2">
+			<div>
+				<h2>من نحن</h2>
+				<p>فريق ساتيك يبني منتجات رقمية مستوحاة من البساطة والقوة في شعارنا: تباين واضح بين <strong>S</strong> و<strong>A</strong>، يوحّد بين الفكرة والتنفيذ. نركز على تجارب مستخدم سلسة وأداء عالي.</p>
+				<ul class="ticks">
+					<li>تصميم حديث ومتجاوب</li>
+					<li>أداء وموثوقية</li>
+					<li>أمان من الدرجة الأولى</li>
+				</ul>
+			</div>
+			<div class="panel">
+				<h3>قيمنا</h3>
+				<p>البساطة، السرعة، والدقة. كل مشروع نطلقه يعكس هذه القيم.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects" class="section projects-section">
+		<div class="container">
+			<h2>المشاريع</h2>
+			<div class="projects-grid">
+				<article class="card">
+					<h3>نظام التحكم الذكي</h3>
+					<p>لوحات تحكم عالية الأداء لبيانات آنية مع رسوم تفاعلية.</p>
+					<a class="link" href="#contact">اطلب عرضًا</a>
+				</article>
+				<article class="card">
+					<h3>تطبيقات ميدانية</h3>
+					<p>تطبيقات تعمل دون اتصال مع مزامنة سحابية آمنة.</p>
+					<a class="link" href="#contact">اطلب عرضًا</a>
+				</article>
+				<article class="card">
+					<h3>منصات بيانات</h3>
+					<p>أنظمة تحليل وتخزين بيانات قابلة للتوسع.</p>
+					<a class="link" href="#contact">اطلب عرضًا</a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="section contact-section">
+		<div class="container grid-2">
+			<div>
+				<h2>تواصل معنا</h2>
+				<p>نرحب بشراكات جديدة وأفكار طموحة.</p>
+				<form class="contact-form" action="#" method="post" novalidate>
+					<label>
+						<span>الاسم</span>
+						<input type="text" name="name" placeholder="اسمك" required>
+					</label>
+					<label>
+						<span>البريد الإلكتروني</span>
+						<input type="email" name="email" placeholder="you@example.com" required>
+					</label>
+					<label class="full">
+						<span>رسالتك</span>
+						<textarea name="message" rows="4" placeholder="اكتب رسالتك"></textarea>
+					</label>
+					<button class="btn primary" type="submit">إرسال</button>
+				</form>
+			</div>
+			<div class="panel dark">
+				<h3>روابط</h3>
+				<ul class="links">
+					<li><a href="#about">لماذا ساتيك؟</a></li>
+					<li><a href="#projects">أحدث المشاريع</a></li>
+					<li><a href="#home">العودة للأعلى</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>© <span id="year"></span> ساتيك — جميع الحقوق محفوظة</p>
+		</div>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
